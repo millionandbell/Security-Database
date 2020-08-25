@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllOffendersForm));
             this.label1 = new System.Windows.Forms.Label();
             this.txt_searchname = new System.Windows.Forms.TextBox();
@@ -36,9 +37,6 @@
             this.searchOffender = new TestOfficerDBApp.SearchOffender();
             this.offendersTableAdapter2 = new TestOfficerDBApp.SearchOffenderTableAdapters.offendersTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.officerDBDataSet2 = new TestOfficerDBApp.officerDBDataSet2();
-            this.officerDBDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,9 @@
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operatorsLicenseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.officerDBDataSet2 = new TestOfficerDBApp.officerDBDataSet2();
+            this.officerDBDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.offendersBindingSource7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchOffender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(9, 13);
+            this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 0;
@@ -68,7 +69,7 @@
             // 
             this.txt_searchname.BackColor = System.Drawing.SystemColors.GrayText;
             this.txt_searchname.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txt_searchname.Location = new System.Drawing.Point(104, 10);
+            this.txt_searchname.Location = new System.Drawing.Point(104, 6);
             this.txt_searchname.Name = "txt_searchname";
             this.txt_searchname.Size = new System.Drawing.Size(316, 20);
             this.txt_searchname.TabIndex = 2;
@@ -95,6 +96,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GrayText;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lastNameDataGridViewTextBoxColumn,
@@ -105,37 +107,23 @@
             this.operatorsLicenseDataGridViewTextBoxColumn,
             this.photoDataGridViewImageColumn});
             this.dataGridView1.DataSource = this.offendersBindingSource7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.GrayText;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(978, 454);
+            this.dataGridView1.Size = new System.Drawing.Size(994, 470);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // officerDBDataSet2
-            // 
-            this.officerDBDataSet2.DataSetName = "officerDBDataSet2";
-            this.officerDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // officerDBDataSet2BindingSource
-            // 
-            this.officerDBDataSet2BindingSource.DataSource = this.officerDBDataSet2;
-            this.officerDBDataSet2BindingSource.Position = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 49);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(984, 473);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -199,6 +187,30 @@
             this.photoDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
             this.photoDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // officerDBDataSet2
+            // 
+            this.officerDBDataSet2.DataSetName = "officerDBDataSet2";
+            this.officerDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // officerDBDataSet2BindingSource
+            // 
+            this.officerDBDataSet2BindingSource.DataSource = this.officerDBDataSet2;
+            this.officerDBDataSet2BindingSource.Position = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Location = new System.Drawing.Point(5, 46);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1000, 489);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Data";
             // 
             // AllOffendersForm
             // 

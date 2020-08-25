@@ -70,6 +70,11 @@
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OffenderDropDown.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OffenderDropDown.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Offenders.cs" />
     <Compile Include="officerDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -88,6 +93,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>officerDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="officerDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>officerDBDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="officerForm.cs">
       <SubType>Form</SubType>
@@ -109,6 +119,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchOffender.cs">
+      <DependentUpon>SearchOffender.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SearchOffender.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +157,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="OffenderDropDown.xsc">
+      <DependentUpon>OffenderDropDown.xsd</DependentUpon>
+    </None>
+    <None Include="OffenderDropDown.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OffenderDropDown.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OffenderDropDown.xss">
+      <DependentUpon>OffenderDropDown.xsd</DependentUpon>
+    </None>
     <None Include="officerDBDataSet.xsc">
       <DependentUpon>officerDBDataSet.xsd</DependentUpon>
     </None>
@@ -176,6 +200,17 @@
     </None>
     <None Include="officerDBDataSet2.xss">
       <DependentUpon>officerDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet3.xsc">
+      <DependentUpon>officerDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="officerDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>officerDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="officerDBDataSet3.xss">
+      <DependentUpon>officerDBDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

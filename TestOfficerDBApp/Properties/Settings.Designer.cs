@@ -33,5 +33,16 @@ namespace TestOfficerDBApp.Properties {
                 return ((string)(this["officerDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LOSTLT-1\\SQLEXPRESS;Initial Catalog=officerDB;Integrated Security=Tru" +
+            "e")]
+        public string OffenderDropDown {
+            get {
+                return ((string)(this["OffenderDropDown"]));
+            }
+        }
     }
 }

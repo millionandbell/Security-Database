@@ -20,9 +20,9 @@ namespace TestOfficerDBApp {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SearchOffender")]
+    [global::System.Xml.Serialization.XmlRootAttribute("OffenderDropDown")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SearchOffender : global::System.Data.DataSet {
+    public partial class OffenderDropDown : global::System.Data.DataSet {
         
         private offendersDataTable tableoffenders;
         
@@ -30,7 +30,7 @@ namespace TestOfficerDBApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SearchOffender() {
+        public OffenderDropDown() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TestOfficerDBApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected SearchOffender(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected OffenderDropDown(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace TestOfficerDBApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SearchOffender cln = ((SearchOffender)(base.Clone()));
+            OffenderDropDown cln = ((OffenderDropDown)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace TestOfficerDBApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SearchOffender";
+            this.DataSetName = "OffenderDropDown";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SearchOffender.xsd";
+            this.Namespace = "http://tempuri.org/OffenderDropDown.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableoffenders = new offendersDataTable();
@@ -225,7 +225,7 @@ namespace TestOfficerDBApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SearchOffender ds = new SearchOffender();
+            OffenderDropDown ds = new OffenderDropDown();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -281,13 +281,13 @@ namespace TestOfficerDBApp {
             
             private global::System.Data.DataColumn columnoffenderID;
             
-            private global::System.Data.DataColumn columnNotes;
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnDOB;
             
             private global::System.Data.DataColumn columnOperatorsLicense;
-            
-            private global::System.Data.DataColumn columnPhoto;
-            
-            private global::System.Data.DataColumn columnFull_Info;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -332,9 +332,25 @@ namespace TestOfficerDBApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NotesColumn {
+            public global::System.Data.DataColumn LastNameColumn {
                 get {
-                    return this.columnNotes;
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DOBColumn {
+                get {
+                    return this.columnDOB;
                 }
             }
             
@@ -343,22 +359,6 @@ namespace TestOfficerDBApp {
             public global::System.Data.DataColumn OperatorsLicenseColumn {
                 get {
                     return this.columnOperatorsLicense;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PhotoColumn {
-                get {
-                    return this.columnPhoto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Full_InfoColumn {
-                get {
-                    return this.columnFull_Info;
                 }
             }
             
@@ -399,14 +399,14 @@ namespace TestOfficerDBApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public offendersRow AddoffendersRow(string Notes, string OperatorsLicense, byte[] Photo, string Full_Info) {
+            public offendersRow AddoffendersRow(string LastName, string FirstName, System.DateTime DOB, string OperatorsLicense) {
                 offendersRow rowoffendersRow = ((offendersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Notes,
-                        OperatorsLicense,
-                        Photo,
-                        Full_Info};
+                        LastName,
+                        FirstName,
+                        DOB,
+                        OperatorsLicense};
                 rowoffendersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowoffendersRow);
                 return rowoffendersRow;
@@ -437,10 +437,10 @@ namespace TestOfficerDBApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnoffenderID = base.Columns["offenderID"];
-                this.columnNotes = base.Columns["Notes"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnDOB = base.Columns["DOB"];
                 this.columnOperatorsLicense = base.Columns["OperatorsLicense"];
-                this.columnPhoto = base.Columns["Photo"];
-                this.columnFull_Info = base.Columns["Full_Info"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -448,14 +448,14 @@ namespace TestOfficerDBApp {
             private void InitClass() {
                 this.columnoffenderID = new global::System.Data.DataColumn("offenderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnoffenderID);
-                this.columnNotes = new global::System.Data.DataColumn("Notes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNotes);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnDOB = new global::System.Data.DataColumn("DOB", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOB);
                 this.columnOperatorsLicense = new global::System.Data.DataColumn("OperatorsLicense", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOperatorsLicense);
-                this.columnPhoto = new global::System.Data.DataColumn("Photo", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoto);
-                this.columnFull_Info = new global::System.Data.DataColumn("Full_Info", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFull_Info);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnoffenderID}, true));
                 this.columnoffenderID.AutoIncrement = true;
@@ -464,10 +464,9 @@ namespace TestOfficerDBApp {
                 this.columnoffenderID.AllowDBNull = false;
                 this.columnoffenderID.ReadOnly = true;
                 this.columnoffenderID.Unique = true;
-                this.columnNotes.MaxLength = 255;
+                this.columnLastName.MaxLength = 255;
+                this.columnFirstName.MaxLength = 255;
                 this.columnOperatorsLicense.MaxLength = 50;
-                this.columnFull_Info.ReadOnly = true;
-                this.columnFull_Info.MaxLength = 510;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -535,7 +534,7 @@ namespace TestOfficerDBApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SearchOffender ds = new SearchOffender();
+                OffenderDropDown ds = new OffenderDropDown();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -621,17 +620,49 @@ namespace TestOfficerDBApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Notes {
+            public string LastName {
                 get {
                     try {
-                        return ((string)(this[this.tableoffenders.NotesColumn]));
+                        return ((string)(this[this.tableoffenders.LastNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Notes\' in table \'offenders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'offenders\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableoffenders.NotesColumn] = value;
+                    this[this.tableoffenders.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tableoffenders.FirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'offenders\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableoffenders.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime DOB {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableoffenders.DOBColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DOB\' in table \'offenders\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableoffenders.DOBColumn] = value;
                 }
             }
             
@@ -653,46 +684,38 @@ namespace TestOfficerDBApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] Photo {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableoffenders.PhotoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Photo\' in table \'offenders\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableoffenders.PhotoColumn] = value;
-                }
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tableoffenders.LastNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Full_Info {
-                get {
-                    try {
-                        return ((string)(this[this.tableoffenders.Full_InfoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Full_Info\' in table \'offenders\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableoffenders.Full_InfoColumn] = value;
-                }
+            public void SetLastNameNull() {
+                this[this.tableoffenders.LastNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNotesNull() {
-                return this.IsNull(this.tableoffenders.NotesColumn);
+            public bool IsFirstNameNull() {
+                return this.IsNull(this.tableoffenders.FirstNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNotesNull() {
-                this[this.tableoffenders.NotesColumn] = global::System.Convert.DBNull;
+            public void SetFirstNameNull() {
+                this[this.tableoffenders.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDOBNull() {
+                return this.IsNull(this.tableoffenders.DOBColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDOBNull() {
+                this[this.tableoffenders.DOBColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -705,30 +728,6 @@ namespace TestOfficerDBApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetOperatorsLicenseNull() {
                 this[this.tableoffenders.OperatorsLicenseColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPhotoNull() {
-                return this.IsNull(this.tableoffenders.PhotoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPhotoNull() {
-                this[this.tableoffenders.PhotoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFull_InfoNull() {
-                return this.IsNull(this.tableoffenders.Full_InfoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFull_InfoNull() {
-                this[this.tableoffenders.Full_InfoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -767,7 +766,7 @@ namespace TestOfficerDBApp {
         }
     }
 }
-namespace TestOfficerDBApp.SearchOffenderTableAdapters {
+namespace TestOfficerDBApp.OffenderDropDownTableAdapters {
     
     
     /// <summary>
@@ -892,39 +891,51 @@ namespace TestOfficerDBApp.SearchOffenderTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "offenders";
             tableMapping.ColumnMappings.Add("offenderID", "offenderID");
-            tableMapping.ColumnMappings.Add("Notes", "Notes");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("DOB", "DOB");
             tableMapping.ColumnMappings.Add("OperatorsLicense", "OperatorsLicense");
-            tableMapping.ColumnMappings.Add("Photo", "Photo");
-            tableMapping.ColumnMappings.Add("Full_Info", "Full_Info");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [offenders] WHERE (([offenderID] = @Original_offenderID) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_OperatorsLicense = 1 AND [OperatorsLicense] IS NULL) OR ([OperatorsLicense] = @Original_OperatorsLicense)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[offenders] WHERE (([offenderID] = @Original_offenderID) AND ((@IsNull_LastName = 1 AND [LastName] IS NULL) OR ([LastName] = @Original_LastName)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_DOB = 1 AND [DOB] IS NULL) OR ([DOB] = @Original_DOB)) AND ((@IsNull_OperatorsLicense = 1 AND [OperatorsLicense] IS NULL) OR ([OperatorsLicense] = @Original_OperatorsLicense)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_offenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "offenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Notes", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LastName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FirstName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOB", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OperatorsLicense", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OperatorsLicense", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OperatorsLicense", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OperatorsLicense", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [offenders] ([Notes], [OperatorsLicense], [Photo]) VALUES (@Notes, @OperatorsLicense, @Photo);
-SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, OperatorsLicense, Photo FROM offenders WHERE (offenderID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[offenders] ([LastName], [FirstName], [DOB], [OperatorsLicense]" +
+                ") VALUES (@LastName, @FirstName, @DOB, @OperatorsLicense);\r\nSELECT offenderID, L" +
+                "astName, FirstName, DOB, OperatorsLicense FROM offenders WHERE (offenderID = SCO" +
+                "PE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOB", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OperatorsLicense", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OperatorsLicense", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [offenders] SET [Notes] = @Notes, [OperatorsLicense] = @OperatorsLicense, [Photo] = @Photo WHERE (([offenderID] = @Original_offenderID) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_OperatorsLicense = 1 AND [OperatorsLicense] IS NULL) OR ([OperatorsLicense] = @Original_OperatorsLicense)));
-SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, OperatorsLicense, Photo FROM offenders WHERE (offenderID = @offenderID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[offenders] SET [LastName] = @LastName, [FirstName] = @FirstName, [DOB] = @DOB, [OperatorsLicense] = @OperatorsLicense WHERE (([offenderID] = @Original_offenderID) AND ((@IsNull_LastName = 1 AND [LastName] IS NULL) OR ([LastName] = @Original_LastName)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_DOB = 1 AND [DOB] IS NULL) OR ([DOB] = @Original_DOB)) AND ((@IsNull_OperatorsLicense = 1 AND [OperatorsLicense] IS NULL) OR ([OperatorsLicense] = @Original_OperatorsLicense)));
+SELECT offenderID, LastName, FirstName, DOB, OperatorsLicense FROM offenders WHERE (offenderID = @offenderID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOB", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OperatorsLicense", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OperatorsLicense", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_offenderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "offenderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Notes", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LastName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FirstName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DOB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOB", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OperatorsLicense", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OperatorsLicense", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OperatorsLicense", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OperatorsLicense", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@offenderID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "offenderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -934,7 +945,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TestOfficerDBApp.Properties.Settings.Default.officerDBConnectionString;
+            this._connection.ConnectionString = global::TestOfficerDBApp.Properties.Settings.Default.OffenderDropDown;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -943,8 +954,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes," +
-                " OperatorsLicense, Photo\r\nFROM            offenders";
+            this._commandCollection[0].CommandText = "SELECT offenderID, LastName, FirstName, DOB, OperatorsLicense FROM dbo.offenders";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -952,7 +962,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SearchOffender.offendersDataTable dataTable) {
+        public virtual int Fill(OffenderDropDown.offendersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -965,9 +975,9 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SearchOffender.offendersDataTable GetData() {
+        public virtual OffenderDropDown.offendersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SearchOffender.offendersDataTable dataTable = new SearchOffender.offendersDataTable();
+            OffenderDropDown.offendersDataTable dataTable = new OffenderDropDown.offendersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -975,14 +985,14 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SearchOffender.offendersDataTable dataTable) {
+        public virtual int Update(OffenderDropDown.offendersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SearchOffender dataSet) {
+        public virtual int Update(OffenderDropDown dataSet) {
             return this.Adapter.Update(dataSet, "offenders");
         }
         
@@ -1005,23 +1015,39 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_offenderID, string Original_Notes, string Original_OperatorsLicense) {
+        public virtual int Delete(int Original_offenderID, string Original_LastName, string Original_FirstName, global::System.Nullable<global::System.DateTime> Original_DOB, string Original_OperatorsLicense) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_offenderID));
-            if ((Original_Notes == null)) {
+            if ((Original_LastName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Notes));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_LastName));
             }
-            if ((Original_OperatorsLicense == null)) {
+            if ((Original_FirstName == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_OperatorsLicense));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_FirstName));
+            }
+            if ((Original_DOB.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_DOB.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_OperatorsLicense == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_OperatorsLicense));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1043,24 +1069,30 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Notes, string OperatorsLicense, byte[] Photo) {
-            if ((Notes == null)) {
+        public virtual int Insert(string LastName, string FirstName, global::System.Nullable<global::System.DateTime> DOB, string OperatorsLicense) {
+            if ((LastName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Notes));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(LastName));
             }
-            if ((OperatorsLicense == null)) {
+            if ((FirstName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(OperatorsLicense));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FirstName));
             }
-            if ((Photo == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((DOB.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DOB.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((byte[])(Photo));
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((OperatorsLicense == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(OperatorsLicense));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1082,43 +1114,65 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Notes, string OperatorsLicense, byte[] Photo, int Original_offenderID, string Original_Notes, string Original_OperatorsLicense, int offenderID) {
-            if ((Notes == null)) {
+        public virtual int Update(string LastName, string FirstName, global::System.Nullable<global::System.DateTime> DOB, string OperatorsLicense, int Original_offenderID, string Original_LastName, string Original_FirstName, global::System.Nullable<global::System.DateTime> Original_DOB, string Original_OperatorsLicense, int offenderID) {
+            if ((LastName == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Notes));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(LastName));
             }
-            if ((OperatorsLicense == null)) {
+            if ((FirstName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(OperatorsLicense));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FirstName));
             }
-            if ((Photo == null)) {
+            if ((DOB.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DOB.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((byte[])(Photo));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_offenderID));
-            if ((Original_Notes == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((OperatorsLicense == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Notes));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(OperatorsLicense));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_offenderID));
+            if ((Original_LastName == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_LastName));
+            }
+            if ((Original_FirstName == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_FirstName));
+            }
+            if ((Original_DOB.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_DOB.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_OperatorsLicense == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_OperatorsLicense));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_OperatorsLicense));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(offenderID));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(offenderID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1139,8 +1193,8 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Notes, string OperatorsLicense, byte[] Photo, int Original_offenderID, string Original_Notes, string Original_OperatorsLicense) {
-            return this.Update(Notes, OperatorsLicense, Photo, Original_offenderID, Original_Notes, Original_OperatorsLicense, Original_offenderID);
+        public virtual int Update(string LastName, string FirstName, global::System.Nullable<global::System.DateTime> DOB, string OperatorsLicense, int Original_offenderID, string Original_LastName, string Original_FirstName, global::System.Nullable<global::System.DateTime> Original_DOB, string Original_OperatorsLicense) {
+            return this.Update(LastName, FirstName, DOB, OperatorsLicense, Original_offenderID, Original_LastName, Original_FirstName, Original_DOB, Original_OperatorsLicense, Original_offenderID);
         }
     }
     
@@ -1235,7 +1289,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(SearchOffender dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(OffenderDropDown dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._offendersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.offenders.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1254,7 +1308,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(SearchOffender dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(OffenderDropDown dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._offendersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.offenders.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1272,7 +1326,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(SearchOffender dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(OffenderDropDown dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._offendersTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.offenders.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1314,7 +1368,7 @@ SELECT offenderID, { fn CONCAT(LastName, FirstName) } AS Full_Info, Notes, Opera
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(SearchOffender dataSet) {
+        public virtual int UpdateAll(OffenderDropDown dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

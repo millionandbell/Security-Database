@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TestOfficerDBApp
 {
     public partial class AllActiveOfficersForm : Form
-    {
+        {
+
+        string cs = "Data Source =LOCALHOST\\SQLEXPRESS; Initial Catalog = officerDB; Integrated Security = True;";
+        SqlConnection con;
+        SqlDataAdapter adapt;
+        DataTable dt;
         public AllActiveOfficersForm()
         {
             InitializeComponent();
@@ -35,6 +41,17 @@ namespace TestOfficerDBApp
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            con = new SqlConnection(cs);
+            con.Open();
+            adapt = new SqlDataAdapter("select FirstName, LastName from officers where FirstName like '" + textBox1.Text + "%'" + "or Lastname like '" + textBox1.Text + "%'", con);
+            dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
     }
 }
