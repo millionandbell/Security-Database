@@ -64,6 +64,15 @@ namespace TestOfficerDBApp
             }
 
         }
+        private void ClearData()
+        {
+            officernamebox.Text = "";
+            offenderidbox.Text = "";
+            richTextBox1.Text = "";
+
+
+        }
+
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -97,7 +106,7 @@ namespace TestOfficerDBApp
 
         private void submitBTN_Click(object sender, EventArgs e)
         {
-            if (officernamebox.Text != "")
+            if (offendernamebox.Text != "")
             {
                 cmd = new SqlCommand("insert into incidents (officerid, offenderid, incidentdetails) VALUES (@officerid, @offenderid, @incidentdetails) ", con);
                 con.Open();
@@ -110,11 +119,11 @@ namespace TestOfficerDBApp
                 con.Close();
                 MessageBox.Show("Successfully added offender.");
                // DisplayData();
-               // ClearData();
+                ClearData();
             }
             else
             {
-                MessageBox.Show("Unsuccessfully added Offender. Did you fill all data?");
+                MessageBox.Show("Unsuccessfully added Incident. Check that the offender textbox has been filled?");
             }
         }
 
@@ -124,6 +133,11 @@ namespace TestOfficerDBApp
         }
 
         private void offenderidbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, EventArgs e)
         {
 
         }

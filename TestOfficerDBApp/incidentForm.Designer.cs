@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(incidentForm));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,6 +60,10 @@
             this.offendernamebox = new System.Windows.Forms.TextBox();
             this.offenderidbox = new System.Windows.Forms.TextBox();
             this.officeridbox = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.officerDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officerDBDataSet1BindingSource)).BeginInit();
@@ -66,12 +73,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.offendersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 211);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(12, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 14;
@@ -80,7 +89,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 69);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.Location = new System.Drawing.Point(9, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 11;
@@ -89,7 +99,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(9, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 10;
@@ -97,17 +108,18 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.richTextBox1.Location = new System.Drawing.Point(15, 243);
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.richTextBox1.Location = new System.Drawing.Point(12, 327);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(751, 195);
+            this.richTextBox1.Size = new System.Drawing.Size(985, 195);
             this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(335, 18);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Location = new System.Drawing.Point(9, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 17;
@@ -121,9 +133,9 @@
             // 
             // submitBTN
             // 
-            this.submitBTN.Location = new System.Drawing.Point(691, 13);
+            this.submitBTN.Location = new System.Drawing.Point(461, 248);
             this.submitBTN.Name = "submitBTN";
-            this.submitBTN.Size = new System.Drawing.Size(75, 23);
+            this.submitBTN.Size = new System.Drawing.Size(159, 45);
             this.submitBTN.TabIndex = 18;
             this.submitBTN.Text = "Submit";
             this.submitBTN.UseVisualStyleBackColor = true;
@@ -131,9 +143,9 @@
             // 
             // exitBTN
             // 
-            this.exitBTN.Location = new System.Drawing.Point(691, 61);
+            this.exitBTN.Location = new System.Drawing.Point(668, 248);
             this.exitBTN.Name = "exitBTN";
-            this.exitBTN.Size = new System.Drawing.Size(75, 23);
+            this.exitBTN.Size = new System.Drawing.Size(159, 45);
             this.exitBTN.TabIndex = 19;
             this.exitBTN.Text = "Exit";
             this.exitBTN.UseVisualStyleBackColor = true;
@@ -146,14 +158,16 @@
             // 
             // officernamebox
             // 
+            this.officernamebox.BackColor = System.Drawing.SystemColors.GrayText;
             this.officernamebox.DataSource = this.officersBindingSource;
             this.officernamebox.DisplayMember = "LastName";
-            this.officernamebox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.officernamebox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.officernamebox.FormattingEnabled = true;
             this.officernamebox.Location = new System.Drawing.Point(103, 15);
             this.officernamebox.Name = "officernamebox";
-            this.officernamebox.Size = new System.Drawing.Size(226, 21);
+            this.officernamebox.Size = new System.Drawing.Size(324, 21);
             this.officernamebox.TabIndex = 20;
+            this.officernamebox.Text = "Select";
             this.officernamebox.ValueMember = "officerID";
             // 
             // officersBindingSource
@@ -211,22 +225,25 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.GrayText;
             this.comboBox2.DataSource = this.officersBindingSource;
             this.comboBox2.DisplayMember = "LastName";
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(421, 15);
+            this.comboBox2.Location = new System.Drawing.Point(103, 53);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(204, 21);
+            this.comboBox2.Size = new System.Drawing.Size(324, 21);
             this.comboBox2.TabIndex = 21;
+            this.comboBox2.Text = "Select";
             this.comboBox2.ValueMember = "LastName";
             // 
             // offendertext
             // 
-            this.offendertext.Location = new System.Drawing.Point(103, 66);
+            this.offendertext.BackColor = System.Drawing.SystemColors.GrayText;
+            this.offendertext.Location = new System.Drawing.Point(103, 165);
             this.offendertext.Name = "offendertext";
-            this.offendertext.Size = new System.Drawing.Size(226, 20);
+            this.offendertext.Size = new System.Drawing.Size(324, 20);
             this.offendertext.TabIndex = 22;
+            this.offendertext.Text = "Search Here";
             this.offendertext.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
@@ -235,57 +252,134 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GrayText;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 108);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 211);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(312, 82);
+            this.dataGridView1.Size = new System.Drawing.Size(415, 82);
             this.dataGridView1.TabIndex = 23;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_CellContentClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(343, 66);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(9, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Offender";
+            this.label5.Text = "Offender Name";
             // 
             // offendernamebox
             // 
-            this.offendernamebox.Location = new System.Drawing.Point(421, 63);
+            this.offendernamebox.BackColor = System.Drawing.SystemColors.GrayText;
+            this.offendernamebox.Location = new System.Drawing.Point(103, 128);
             this.offendernamebox.Name = "offendernamebox";
-            this.offendernamebox.Size = new System.Drawing.Size(204, 20);
+            this.offendernamebox.Size = new System.Drawing.Size(324, 20);
             this.offendernamebox.TabIndex = 25;
+            this.offendernamebox.Text = "Select";
             // 
             // offenderidbox
             // 
-            this.offenderidbox.Location = new System.Drawing.Point(421, 108);
+            this.offenderidbox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.offenderidbox.Location = new System.Drawing.Point(897, 273);
             this.offenderidbox.Name = "offenderidbox";
             this.offenderidbox.Size = new System.Drawing.Size(100, 20);
             this.offenderidbox.TabIndex = 26;
+            this.offenderidbox.Visible = false;
             this.offenderidbox.TextChanged += new System.EventHandler(this.offenderidbox_TextChanged);
             // 
             // officeridbox
             // 
-            this.officeridbox.Location = new System.Drawing.Point(421, 153);
+            this.officeridbox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.officeridbox.Location = new System.Drawing.Point(897, 305);
             this.officeridbox.Name = "officeridbox";
             this.officeridbox.Size = new System.Drawing.Size(100, 20);
             this.officeridbox.TabIndex = 27;
+            this.officeridbox.Visible = false;
             this.officeridbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(872, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 101);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 49;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox1.Location = new System.Drawing.Point(461, 15);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(366, 68);
+            this.textBox1.TabIndex = 50;
+            this.textBox1.Text = "Note: Search for offender in Search Offender textbox, results will populate below" +
+    ". Click on the offender and it should populate the Offender Name textbox.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Location = new System.Drawing.Point(9, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Incident Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.Location = new System.Drawing.Point(103, 91);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(324, 20);
+            this.dateTimePicker1.TabIndex = 52;
             // 
             // incidentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.ClientSize = new System.Drawing.Size(1009, 534);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.officeridbox);
             this.Controls.Add(this.offenderidbox);
             this.Controls.Add(this.offendernamebox);
@@ -301,7 +395,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "incidentForm";
+            this.Opacity = 0.95D;
             this.RightToLeftLayout = true;
             this.Text = "Add Incident Form";
             this.Load += new System.EventHandler(this.Form4_Load);
@@ -314,6 +410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.offendersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +426,6 @@
         private System.Windows.Forms.Button submitBTN;
         private System.Windows.Forms.Button exitBTN;
         private officerDBDataSet officerDBDataSet1;
-        private System.Windows.Forms.ComboBox officernamebox;
         private System.Windows.Forms.BindingSource officerDBDataSet1BindingSource;
         private System.Windows.Forms.BindingSource officersBindingSource;
         private officerDBDataSetTableAdapters.officersTableAdapter officersTableAdapter;
@@ -348,5 +444,10 @@
         private System.Windows.Forms.TextBox offendernamebox;
         private System.Windows.Forms.TextBox offenderidbox;
         private System.Windows.Forms.TextBox officeridbox;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox officernamebox;
     }
 }

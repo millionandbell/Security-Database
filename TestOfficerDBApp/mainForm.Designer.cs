@@ -216,7 +216,7 @@
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timeLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.timeLabel.Location = new System.Drawing.Point(133, 9);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(208, 27);

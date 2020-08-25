@@ -112,7 +112,7 @@ namespace TestOfficerDBApp
 
         private void offenderForm_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void fNametxtbox_TextChanged(object sender, EventArgs e)

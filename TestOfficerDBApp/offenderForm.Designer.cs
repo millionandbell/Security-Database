@@ -244,6 +244,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "offenderForm";
+            this.Opacity = 0.95D;
             this.Text = "Add Offender Form";
             this.Load += new System.EventHandler(this.offenderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.offenderpicbox)).EndInit();
