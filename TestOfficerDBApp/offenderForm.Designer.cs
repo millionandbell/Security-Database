@@ -51,7 +51,7 @@
             // lNameTextbox
             // 
             this.lNameTextbox.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNameTextbox.Location = new System.Drawing.Point(223, 83);
+            this.lNameTextbox.Location = new System.Drawing.Point(143, 63);
             this.lNameTextbox.Name = "lNameTextbox";
             this.lNameTextbox.Size = new System.Drawing.Size(204, 20);
             this.lNameTextbox.TabIndex = 7;
@@ -60,7 +60,7 @@
             // fNametxtbox
             // 
             this.fNametxtbox.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.fNametxtbox.Location = new System.Drawing.Point(223, 36);
+            this.fNametxtbox.Location = new System.Drawing.Point(143, 17);
             this.fNametxtbox.Name = "fNametxtbox";
             this.fNametxtbox.Size = new System.Drawing.Size(204, 20);
             this.fNametxtbox.TabIndex = 6;
@@ -71,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Garamond", 18F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 76);
+            this.label2.Location = new System.Drawing.Point(12, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 27);
             this.label2.TabIndex = 5;
@@ -82,7 +82,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Garamond", 18F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(27, 29);
+            this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 27);
             this.label1.TabIndex = 4;
@@ -93,7 +93,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Garamond", 18F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(27, 170);
+            this.label3.Location = new System.Drawing.Point(12, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 27);
             this.label3.TabIndex = 8;
@@ -118,7 +118,7 @@
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 178);
+            this.dateTimePicker1.Location = new System.Drawing.Point(143, 170);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(204, 20);
             this.dateTimePicker1.TabIndex = 13;
@@ -129,7 +129,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Garamond", 18F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 217);
+            this.label4.Location = new System.Drawing.Point(12, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 27);
             this.label4.TabIndex = 15;
@@ -140,7 +140,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Garamond", 18F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(27, 264);
+            this.label5.Location = new System.Drawing.Point(13, 265);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 27);
             this.label5.TabIndex = 16;
@@ -200,7 +200,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Garamond", 18F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(27, 123);
+            this.label7.Location = new System.Drawing.Point(12, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 27);
             this.label7.TabIndex = 22;
@@ -215,7 +215,7 @@
             "Female",
             "Unknown",
             "Other"});
-            this.genderbox1.Location = new System.Drawing.Point(223, 130);
+            this.genderbox1.Location = new System.Drawing.Point(143, 109);
             this.genderbox1.Name = "genderbox1";
             this.genderbox1.Size = new System.Drawing.Size(204, 21);
             this.genderbox1.TabIndex = 35;

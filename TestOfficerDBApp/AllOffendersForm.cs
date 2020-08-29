@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 
+
 namespace TestOfficerDBApp
 {
     public partial class AllOffendersForm : Form
@@ -52,6 +53,26 @@ namespace TestOfficerDBApp
             {
                 MessageBox.Show("Success? but really?");
             }
+        }
+
+        private void offendersBindingSource7_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void officerDBDataSet2BindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     } 
 }

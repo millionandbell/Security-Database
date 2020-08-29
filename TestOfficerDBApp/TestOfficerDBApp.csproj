@@ -52,6 +52,18 @@
     <Compile Include="AllActiveOfficersForm.Designer.cs">
       <DependentUpon>AllActiveOfficersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="allincidentbydate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allincidentbydate.Designer.cs">
+      <DependentUpon>allincidentbydate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allIncidentByname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allIncidentByname.Designer.cs">
+      <DependentUpon>allIncidentByname.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllOffendersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     </Compile>
     <EmbeddedResource Include="AllActiveOfficersForm.resx">
       <DependentUpon>AllActiveOfficersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allincidentbydate.resx">
+      <DependentUpon>allincidentbydate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allIncidentByname.resx">
+      <DependentUpon>allIncidentByname.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllOffendersForm.resx">
       <DependentUpon>AllOffendersForm.cs</DependentUpon>

@@ -152,6 +152,7 @@
             this.byDateToolStripMenuItem.Name = "byDateToolStripMenuItem";
             this.byDateToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.byDateToolStripMenuItem.Text = "By Date";
+            this.byDateToolStripMenuItem.Click += new System.EventHandler(this.byDateToolStripMenuItem_Click);
             // 
             // officerReportsToolStripMenuItem
             // 
@@ -181,7 +182,7 @@
             // allOffendersToolStripMenuItem
             // 
             this.allOffendersToolStripMenuItem.Name = "allOffendersToolStripMenuItem";
-            this.allOffendersToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.allOffendersToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.allOffendersToolStripMenuItem.Text = "All Offenders";
             this.allOffendersToolStripMenuItem.Click += new System.EventHandler(this.allOffendersToolStripMenuItem_Click);
             // 

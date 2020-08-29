@@ -1,6 +1,6 @@
 ﻿namespace TestOfficerDBApp
 {
-    partial class AllOffendersForm
+    partial class allIncidentByname
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllOffendersForm));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(allIncidentByname));
             this.txt_searchname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.offendersBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.searchOffender = new TestOfficerDBApp.SearchOffender();
             this.offendersTableAdapter2 = new TestOfficerDBApp.SearchOffenderTableAdapters.offendersTableAdapter();
@@ -48,26 +48,26 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(10, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Search Offender:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // txt_searchname
             // 
             this.txt_searchname.BackColor = System.Drawing.SystemColors.GrayText;
             this.txt_searchname.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txt_searchname.Location = new System.Drawing.Point(104, 6);
+            this.txt_searchname.Location = new System.Drawing.Point(103, 3);
             this.txt_searchname.Name = "txt_searchname";
             this.txt_searchname.Size = new System.Drawing.Size(316, 20);
-            this.txt_searchname.TabIndex = 2;
-            this.txt_searchname.TextChanged += new System.EventHandler(this.txt_searchname_TextChanged_1);
+            this.txt_searchname.TabIndex = 6;
+            this.txt_searchname.TextChanged += new System.EventHandler(this.txt_searchname_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(9, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Search Offender:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // offendersBindingSource7
             // 
@@ -128,28 +128,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(5, 46);
+            this.groupBox1.Location = new System.Drawing.Point(4, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1000, 489);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // AllOffendersForm
+            // allIncidentByname
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
             this.ClientSize = new System.Drawing.Size(1009, 534);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_searchname);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AllOffendersForm";
-            this.Opacity = 0.95D;
-            this.Text = "Search Offender";
-            this.Load += new System.EventHandler(this.AllOffendersForm_Load);
+            this.Name = "allIncidentByname";
+            this.Text = "Search All Incidents By Name";
+            this.Load += new System.EventHandler(this.allIncidentByname_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.offendersBindingSource7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchOffender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -163,18 +162,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_searchname;
-        private SearchOffender searchOffender;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource offendersBindingSource7;
+        private SearchOffender searchOffender;
         private SearchOffenderTableAdapters.offendersTableAdapter offendersTableAdapter2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private officerDBDataSet2 officerDBDataSet2;
         private System.Windows.Forms.BindingSource officerDBDataSet2BindingSource;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
     }
 }

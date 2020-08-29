@@ -84,8 +84,8 @@ namespace TestOfficerDBApp
 
         private void byOffenderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Imagine a world where the offender query was running," +
-                              " keep thinking about it until i get it running. :)");
+            allIncidentByname frm5 = new allIncidentByname();
+            frm5.Show();
         }
 
         private void allActiveOfficersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,6 +119,12 @@ namespace TestOfficerDBApp
         private void label1_Click(object sender, EventArgs e)
         {
             timeLabel.Text = DateTime.Now.ToString();
+        }
+
+        private void byDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            allincidentbydate frm6 = new allincidentbydate();
+            frm6.Show();
         }
     }
     }
